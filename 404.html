@@ -75,7 +75,7 @@
     <div class="custom-loader"></div>
     <script>
         let xmlHHTP = new XMLHttpRequest();
-        xmlHHTP.open('GET', "errorpages.xml", false)
+        xmlHHTP.open('GET', "../errorpages.xml", false)
         xmlHHTP.send()
         let xmlDoc = xmlHHTP.responseXML
         let error = xmlDoc.getElementsByTagName('error')[0].childNodes;
