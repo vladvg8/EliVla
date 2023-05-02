@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'Inter', sans-serif;
+        }
+        h1 {
+            width: fit-content;
+            display: block;
+            margin: 15vw auto 0 auto;
+            font-size: 10vw;
+            color: #3d97ec;
+        }
+        h3 {
+            color: #101e2c;
+            width: fit-content;
+            display: block;
+            margin: 10px auto 0 auto;
+        }
+        p {
+            color: rgb(58, 58, 58);
+            width: 80%;
+            margin: 20px auto 0 auto;
+            text-align: center;
+            font-size: 20px;
+            line-height: 150%;
+        }
+        .custom-loader {
+            margin: 20px auto 0 auto;
+            width: 50px;
+            height: 50px;
+            display: grid;
+            border-radius: 50%;
+            -webkit-mask:radial-gradient(farthest-side,#0000 40%,#000 41%);
+            background:
+                linear-gradient(0deg ,#009FF480 50%,#009FF4FF 0) center/4px 100%,
+                linear-gradient(90deg,#009FF440 50%,#009FF4BF 0) center/100% 4px;
+            background-repeat: no-repeat;
+            animation: s3 1s infinite steps(12);
+        }
+        .custom-loader::before,
+        .custom-loader::after {
+            content:"";
+            grid-area: 1/1;
+            border-radius: 50%;
+            background:inherit;
+            opacity: 0.915;
+            transform: rotate(30deg);
+        }
+        .custom-loader::after {
+            opacity: 0.83;
+            transform: rotate(60deg);
+        }
+
+        @keyframes s3 {
+            100% {transform: rotate(1turn)}
+        }
+    </style>
+    <link rel="shortcut icon" href="img/logoForHead.svg" type="image/png">
+    <title>EliVla</title>
+</head>
+<body>
+    <h1 id="codeError"></h1>
+    <h3 id="nameError"></h3>
+    <p id="textError"></p>
+    <div class="custom-loader"></div>
+    <script>
+        let xmlHHTP = new XMLHttpRequest();
+        xmlHHTP.open('GET', "errorpages.xml", false)
+        xmlHHTP.send()
+        let xmlDoc = xmlHHTP.responseXML
+        let error = xmlDoc.getElementsByTagName('error')[0].childNodes;
+        document.getElementById('codeError').innerHTML = error[1].innerHTML;
+        document.getElementById('nameError').innerHTML = error[3].innerHTML;
+        document.getElementById('textError').innerHTML = error[5].innerHTML;
+    </script>
+</body>
+</html>
