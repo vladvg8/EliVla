@@ -1,0 +1,1212 @@
+* {
+  margin: 0;
+  padding: 0;
+  a {
+    color: black;
+    text-decoration: none;
+  }
+}
+
+#submitEvent {
+  width: 100%;
+  font-size: 10px;
+  display: block;
+  color: white;
+  z-index: 20;
+  top: 5vw;
+  position: fixed;
+  visibility: hidden;
+  h1 {
+    border-radius: 1vw;
+    margin: 0 auto;
+    text-align: center;
+    width: fit-content;
+    padding: 2vw 5vw;
+    background-color: #214769;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  }
+}
+
+#submitEvent.show {
+  visibility: visible;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+@keyframes fadein {
+  from {
+    top: 0;
+    opacity: 0;
+  }
+  to {
+    top: 5vw;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeout {
+  from {
+    top: 5vw;
+    opacity: 1;
+  }
+  to {
+    top: 0;
+    opacity: 0;
+  }
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  img {
+    width: 5.27vw;
+    height: 1.58vw;
+  }
+  display: flex;
+  height: 4.54vw;
+  width: 100%;
+  background-color: black;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 1.05vw;
+  span {
+    a {
+      color: white;
+    }
+  }
+  nav {
+    width: 31.59vw;
+    ul {
+      font-weight: 500;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      a {
+        color: white;
+      }
+      a:hover {
+        border-bottom: solid 1px #00c1fd;
+      }
+    }
+  }
+  .newHeader {
+    display: flex;
+    width: 74.74vw;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+.firstBlock {
+  margin-top: 4.54vw;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 42.77vw;
+  .firstBlockText {
+    width:38.66vw;
+    height: 42.77vw;
+    background-color: #0f1536;
+    display: flex;
+    justify-content: right;
+    .fullinfo {
+      width: 25.32vw;
+      display: flex;
+      flex-direction: column;
+      h1 {
+        margin-top: 2.16vw;
+        color: white;
+        font-width: 700;
+        width: 25.32vw;
+        font-size: 3.16vw;
+      }
+      .mainText {
+        font-weight: 400;
+        font-size: 1.05vw;
+        margin-top: 5.22vw;
+        color: #c6c3af;
+      }
+      .bookingButton {
+        width: fit-content;
+        margin-top: 2.90vw;
+        font-weight: 500;
+        font-size: 1.27vw;
+        padding: 0.58vw 3.80vw 0.58vw 3.80vw;
+        background-image: url(../img/bgbutton.png);
+        background-size: cover;
+      }
+    }
+  }
+  .newsBgDiv {
+    display: flex;
+    background-image: url(../img/bgForMainDiv.png);
+    width: 62.76vw;
+    height: 42.77vw;
+    background-size: cover;
+    .firstNew {
+      margin-left: 1.05vw;
+      margin-top: 30.80vw;
+      color: white;
+      font-weight: 400;
+      font-size: 1.05vw;
+      background-image: url(../img/news1.png);
+      background-size: cover;
+      width: 15.82vw;
+      height: 9.49vw;
+      border-radius: 0.26vw;
+      display: flex;
+      justify-content: space-between;
+      p {
+        margin-top: 7.44vw;
+        display: inline;
+        margin-left: 0.79vw;
+        margin-bottom: 0.79vw;
+      }
+      img {margin-top: 7.44vw;
+        margin-right: 0.79vw;
+        margin-bottom: 0.42vw;
+        display: inline;
+        width: 1.58vw;
+      }
+    }
+    .secondNew {
+      margin-left: 0.53vw;
+      margin-top: 30.80vw;
+      color: white;
+      font-weight: 400;
+      font-size: 1.05vw;
+      background-image: url(../img/news2.png);
+      background-size: cover;
+      width: 15.82vw;
+      height: 9.49vw;
+      border-radius: 0.26vw;
+      display: flex;
+      justify-content: space-between;
+      p {
+        margin-top: 7.44vw;
+        display: inline;
+        margin-left: 0.79vw;
+        margin-bottom: 0.79vw;
+      }
+      img {margin-top: 7.44vw;
+        margin-right: 0.79vw;
+        margin-bottom: 0.42vw;
+        display: inline;
+        width: 1.58vw;
+      }
+    }
+    .thirdNew {
+      border-radius: 0.26vw;
+      margin-left: 0.53vw;
+      margin-top: 30.80vw;
+      color: white;
+      font-weight: 400;
+      font-size: 1.05vw;
+      background-image: url(../img/news3.png);
+      background-size: cover;
+      width: 15.82vw;
+      height: 9.49vw;
+      display: flex;
+      justify-content: space-between;
+      p {
+        margin-top: 7.44vw;
+        display: inline;
+        margin-left: 0.79vw;
+        margin-bottom: 0.79vw;
+      }
+      img {margin-top: 7.44vw;
+        margin-right: 0.79vw;
+        margin-bottom: 0.42vw;
+        display: inline;
+        width: 1.58vw;
+      }
+    }
+  }
+}
+
+.secondBlock {
+  width: 100%;
+  height: 62.18vw;
+  background-image: url(../img/bgSecondDiv.png);
+  background-size: cover;
+  display: flex;
+  justify-content: space-around;
+  .newSecondBlock {
+    width: 74.74vw;
+    height: 62.18vw;
+    display: flex;
+    flex-direction: column;
+    .achivments {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      margin-top: 4.75vw;
+      div {
+        text-align: center;
+        font-size: 1.69vw;
+        font-weight: 500;
+        width: 17.93vw;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 5.27vw;
+          height: 5.27vw;
+        }
+        p {
+          margin-top: 1vw;
+        }
+      }
+    }
+    .aboutUs {
+      margin-top: 5.27vw;
+      h1 {
+        font-size: 5.06vw;
+        font-width: 600;
+        color: #1b8f7f;
+      }
+      .aboutUsInfo {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 1.85vw;
+        .textAndButton {
+          width: 30.59vw;
+          height: 23.31vw;
+          font-width: 400;
+          font-size: 1.21vw;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          a {
+            margin-top: 2.5vw;
+            border: 1px solid black;
+            border-radius: 0.53vw;
+            padding: 0.84vw 4.54vw;
+          }
+        }
+        .photoOfAquapark {
+          width: 43.25vw;
+          height: 28.48vw;
+          border-radius: 0.53vw;
+          background-image: url(../img/aboutUsPhoto.png);
+          background-size: cover;
+        }
+      }
+    }
+  }
+}
+
+.thirdBlock {
+  width: 100%;
+  height: 42.72vw;
+  background-color: #e8f5fd;
+  display: flex;
+  justify-content: space-around;
+  .newThirdBlock {
+    width: 74.74vw;
+    height: 42.72vw;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin-top: 4.75vw;
+      font-weight: 600;
+      font-size: 5.06vw;
+      color: #1b8f7f;
+    }
+    .services {
+      margin-top: 1.53vw;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      h1 {
+        font-weight: 500;
+        color: black;
+        font-size: 1.69vw;
+        margin-top: 0;
+        border-bottom: 3px solid #1b8f7f;
+      }
+      ul {
+        margin-top: 2.11vw;
+        font-size: 1.27vw;
+        font-weight: 400;
+        list-style-type: none;
+      }
+      .fitnessCenter {
+        margin-top: 1.53vw;
+        height: fit-content;
+        ul {
+          height: 4.38vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+      .aquaZone {
+        margin-top: 1.53vw;
+        height: 17.25vw;
+        ul {
+          height: 12.92vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+      .SPATerritory {
+        margin-top: 1.53vw;
+        height: 22.94vw;
+        ul {
+          height: 18.62vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+      .other {
+        margin-top: 1.53vw;
+        height: 17.25vw;
+        ul {
+          height: 12.92vw;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+        }
+      }
+
+    }
+  }
+}
+
+.divForma {
+  width: 84.39vw;
+  height: 29.54vw;
+  background: white;
+  display: flex;
+  justify-content: space-around;
+  margin: auto;
+  margin-top: -3.16vw;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  .newForma {
+    display: flex;
+    flex-direction: column;
+    width: 74.74vw;
+    h1 {
+      margin-top: 2.64vw;
+      font-weight: 600;
+      font-size: 3.38vw;
+      color: #01878B;
+      text-align: center;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      .submitInput {
+        background-color: white;
+        padding: 0.42vw 2.64vw;
+        font-size: 1.69vw;
+        border-radius: 0.26vw;
+        width: fit-content;
+        display: flex;
+        margin: auto;
+        margin-top: 2.11vw;
+      }
+      .inputs {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-top: 2.11vw;
+        input {
+          padding-left: 0.79vw;
+          width: 17.14vw;
+          height: 3.53vw;
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        }
+      }
+      .memberships {
+        margin-top: 2.64vw;
+        section {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+          .newMem {
+            width: 24.26vw;
+            height: 6.86vw;
+            background-color: #e8f5fd;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            .nameMemAndCustomer {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              height: 6.86vw;
+              margin-left: 0.79vw;
+              .customerIc {
+                margin-bottom: 0.79vw;
+                display: flex;
+                align-items: center;
+                img {
+                  width: 1.58vw;
+                  height: 1.58vw;
+                }
+                span {
+                  margin-left: 0.79vw;
+                  font-size: 1.27vw;
+                  font-weight: 400;
+                }
+              }
+            }
+            h2 {
+              font-weight: 600;
+              font-size: 1.8vw;
+              color: green;
+              margin-right: 0.79vw;
+            }
+            h1 {
+              width: fit-content;
+              margin-top: 0.79vw;
+              font-size: 1.69vw;
+              font-weight: 600;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.fifthBlock {
+  margin-top: 4.75vw;
+  width: 100%;
+  height: 33.81vw;
+  display: flex;
+  flex-direction: row;
+  .mapBlock {
+    width: 50.11vw;
+    height: 33.81vw;
+    overflow: hidden;
+    background-color: black;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    img:hover {
+      transform: scale(1.05);
+      opacity: .8;
+    }
+  }
+  .info {
+    width: 51.16vw;
+    height: 33.81vw;
+    background-color: #E9F6FF;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    p {
+      font-size: 1.69vw;
+      width: fit-content;
+      margin-top: 0.53vw;
+      font-weight: 500;
+    }
+    div {
+      width: 21.10vw;
+      height: 7.86vw;
+      margin-left: 9.07vw;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      img {
+        width: 5.27vw;
+        height: 5.27vw;
+      }
+    }
+    .location {
+      margin-top: 2.11vw;
+    }
+    .phone {
+      margin-bottom: 2.11vw;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 17.51vw;
+  background-color: black;
+  display: flex;
+  justify-content: space-around;
+  .newFooter {
+    height: 17.51vw;
+    .infoFooter {
+      width: 14.9vw;
+      height: 11.18vw;
+      img {
+        width: 5.27vw;
+        height: 1.58vw;
+        margin-top: 3.16vw;
+      }
+      p {
+        color: #8F8F8F;
+        font-size: 0.84vw;
+      }
+    }
+    width: 74.89vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    .categories {
+      margin-top: 3.16vw;
+      width: fit-content;
+      height: 10.44vw;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: fit-content;
+        height: 6.38vw;
+        p {
+          color: #8F8F8F;
+          font-size: 0.84vw;
+        }
+        a {
+          color: #8F8F8F;
+          font-size: 0.84vw;
+        }
+      }
+    }
+    .links {
+      margin-top: 3.16vw;
+      width: fit-content;
+      height: 6.86vw;
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: fit-content;
+        height: 2.80vw;
+        p {
+          color: #8F8F8F;
+          font-size: 0.84vw;
+        }
+        a {
+          color: #8F8F8F;
+          font-size: 0.84vw;
+        }
+      }
+    }
+    ul {
+      list-style-type: none;
+      margin-top: 2.53vw;
+    }
+    p {
+      color: #8F8F8F;
+      font-size: 0.84vw;
+    }
+    a {
+      color: #8F8F8F;
+      font-size: 0.84vw;
+    }
+  }
+}
+
+.news, .servicePhone, .formaPhone, .contactsPhone, .footerPhone ,.phoneHeader, .phoneMainDiv, .phoneMainText, .newOnePhone,.newTwoPhone, .newThreePhone {
+  display: none;
+}
+
+@media (max-width: 1179px) {
+  header, .firstBlock, .secondBlock, .thirdBlock, .divForma, .fifthBlock, footer {
+    display: none;
+  }
+  .phoneHeader {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    .gridHeader {
+      z-index: 5;
+      width: 90vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        z-index: 3;
+      }
+      .burger_menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+        span {
+          position: absolute;
+          background-color: white;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          top: 8px;
+        }
+      }
+      .burger_menu:before, .burger_menu:after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+      }
+      .burger_menu:before {
+        top: 0;
+      }
+      .burger_menu:after {
+        bottom: 0;
+      }
+      .burger {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 70%;
+        width: 30%;
+        height: 100%;
+        background: black;
+        padding: 110px 0px 0px 0px;
+        ul {
+          display: flex;
+          height: 200px;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: right;
+          padding: 0px 5vw 0px 0px;
+          li {
+            list-style-type: none;
+          }
+        }
+      }
+    }
+  }
+  .phoneMainDiv {
+    display: flex;
+    width: 100%;
+    height: 50.156vw;
+    background-image: url(../img/phoneVersion/main.png);
+    background-size: cover;
+  }
+  .phoneMainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30vw;
+    min-height: 100px;
+    background-color: #01878B;
+    text-align: center;
+    color: white;
+    h1 {
+      margin-top: -9.889vw;
+      width: fit-content;
+      padding: 0 5vw 0 5vw;
+      font-size: 6.667vw;
+    }
+    a {
+      width: fit-content;
+      padding: 2.778vw 6.389vw;
+      font-weight: 600;
+      font-size: 3.667vw;
+      background-color: #fff;
+      box-shadow: 0px 1px 4px #FFFFFF;
+      border-radius: 2.778vw;
+      margin-top: 9vw;
+    }
+  }
+  .newOnePhone {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 150px;
+    width: 300px;
+    background-image: url(../img/news1.png);
+    background-size: cover;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    p:nth-child(1) {
+      padding: 0 0 5px 10px;
+    }
+    p:nth-child(2) {
+      padding: 0 10px 5px 0;
+    }
+  }
+  .newTwoPhone {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 150px;
+    width: 300px;
+    background-image: url(../img/news2.png);
+    background-size: cover;
+    color: white;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    p:nth-child(1) {
+      padding: 0 0 5px 10px;
+    }
+    p:nth-child(2) {
+      padding: 0 10px 5px 0;
+    }
+  }
+  .newThreePhone {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 150px;
+    width: 300px;
+    background-image: url(../img/news3.png);
+    background-size: cover;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    p:nth-child(1) {
+      padding: 0 0 5px 10px;
+    }
+    p:nth-child(2) {
+      padding: 0 10px 5px 0;
+    }
+  }
+  .news {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    background-image: url(../img/phoneVersion/bg.jpg);
+    background-size: cover;
+    justify-content: space-around;
+    .borderNews {
+      width: 90%;
+      height: fit-content;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      height: fit-content;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  .servicePhone {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    background-color: #E9F6FF;
+    .borderServicePhone {
+      ul {
+        li {
+          margin-top: 10px;
+          list-style-type: none;
+          h1 {
+            border-bottom: 3px solid #01878B;
+            font-weight: 500;
+          }
+        }
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+      }
+      text-align: center;
+      padding: 0 5px;
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
+  .formaPhone {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    .borderFormaPhone {
+      width: 90%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #01878B;
+      margin-top: 15px;
+      form {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        .inputsPhone {
+          input {
+            margin-top: 5px;
+            width: 200px;
+            padding: 10px 20px;
+          }
+          input[type="date"] {
+            padding: 9px 20px;
+          }
+          display: flex;
+          width: 90%;
+          flex-direction: row;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+      }
+      select {
+        display: block;
+        margin-top: 5px;
+        width: 245px;
+        padding: 10px 20px;
+      }
+      #sub {
+        width: 245px;
+        display: block;
+        padding: 10px 20px;
+        background-color: #fff;
+      }
+    }
+  }
+  .contactsPhone {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .mapPhone {
+      width: 100%;
+      height: 30vw;
+    }
+    .cont {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: row;
+      justify-content: space-between;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 150px;
+          height: 150px;
+        }
+        font-size: 20px; // 704
+      }
+    }
+  }
+  .footerPhone {
+    display: block;
+    width: 100%;
+    height: fit-content;
+    background-color: black;
+    margin-top: 20px;
+    svg {
+      margin: 15px 0 0 15px;
+    }
+    p {
+      width: fit-content;
+      text-align: center;
+      color: white;
+      font-size: 15px;
+      margin: 10px auto 0 auto;
+      padding: 0 0 10px 0;
+    }
+  }
+}
+
+@media (max-width: 610px) {
+  header, .firstBlock, .secondBlock, .thirdBlock, .divForma, .fifthBlock, footer {
+    display: none;
+  }
+  .phoneHeader {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+    .gridHeader {
+      z-index: 5;
+      width: 90vw;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      img {
+        z-index: 3;
+      }
+      .burger_menu {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+        span {
+          position: absolute;
+          background-color: white;
+          left: 0;
+          width: 100%;
+          height: 3px;
+          top: 8px;
+        }
+      }
+      .burger_menu:before, .burger_menu:after {
+        content: "";
+        background-color: white;
+        position: absolute;
+        width: 100%;
+        height: 3px;
+      }
+      .burger_menu:before {
+        top: 0;
+      }
+      .burger_menu:after {
+        bottom: 0;
+      }
+      .burger {
+        position: fixed;
+        display: none;
+        top: 0;
+        left: 70%;
+        width: 30%;
+        height: 100%;
+        background: black;
+        padding: 110px 0px 0px 0px;
+        ul {
+          display: flex;
+          height: 200px;
+          flex-direction: column;
+          justify-content: space-between;
+          text-align: right;
+          padding: 0px 5vw 0px 0px;
+          li {
+            list-style-type: none;
+          }
+        }
+      }
+    }
+  }
+  .phoneMainDiv {
+    display: flex;
+    width: 100%;
+    height: 50.156vw;
+    background-image: url(../img/phoneVersion/main.png);
+    background-size: cover;
+  }
+  .phoneMainText {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 30vw;
+    min-height: 100px;
+    background-color: #01878B;
+    text-align: center;
+    color: white;
+    h1 {
+      margin-top: -9.889vw;
+      width: fit-content;
+      padding: 0 5vw 0 5vw;
+      font-size: 6.667vw;
+    }
+    a {
+      width: fit-content;
+      padding: 2.778vw 6.389vw;
+      font-weight: 600;
+      font-size: 3.667vw;
+      background-color: #fff;
+      box-shadow: 0px 1px 4px #FFFFFF;
+      border-radius: 2.778vw;
+      margin-top: 9vw;
+    }
+  }
+  .newOnePhone {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 150px;
+    width: 300px;
+    background-image: url(../img/news1.png);
+    background-size: cover;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    p:nth-child(1) {
+      padding: 0 0 5px 10px;
+    }
+    p:nth-child(2) {
+      padding: 0 10px 5px 0;
+    }
+  }
+  .newTwoPhone {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 150px;
+    width: 300px;
+    background-image: url(../img/news2.png);
+    background-size: cover;
+    color: white;
+    font-size: 24px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    p:nth-child(1) {
+      padding: 0 0 5px 10px;
+    }
+    p:nth-child(2) {
+      padding: 0 10px 5px 0;
+    }
+  }
+  .newThreePhone {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    height: 150px;
+    width: 300px;
+    background-image: url(../img/news3.png);
+    background-size: cover;
+    color: white;
+    font-size: 24px;
+    border-radius: 10px;
+    p:nth-child(1) {
+      padding: 0 0 5px 10px;
+    }
+    p:nth-child(2) {
+      padding: 0 10px 5px 0;
+    }
+  }
+  .news {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    background-image: url(../img/phoneVersion/bg.jpg);
+    background-size: cover;
+    justify-content: space-around;
+    .borderNews {
+      width: 90%;
+      height: fit-content;
+      margin-top: 15px;
+      margin-bottom: 15px;
+      height: fit-content;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-around;
+    }
+  }
+  .servicePhone {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    .borderServicePhone {
+      ul {
+        li {
+          margin-top: 10px;
+          list-style-type: none;
+          h1 {
+            border-bottom: 3px solid #01878B;
+            font-weight: 500;
+          }
+        }
+        width: 300px;
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+      }
+      text-align: center;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+  .formaPhone {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: space-around;
+    .borderFormaPhone {
+      width: 90%;
+      height: fit-content;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      color: #01878B;
+      margin-top: 15px;
+      form {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        width: 100%;
+        flex-wrap: wrap;
+        margin-top: 5px;
+        .inputsPhone {
+          input {
+            margin-top: 5px;
+            width: 200px;;
+            padding: 10px 20px;
+          }
+          input[type="date"] {
+            padding: 9px 20px;
+          }
+          display: flex;
+          width: 90%;
+          flex-direction: column;
+          justify-content: space-between;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  .contactsPhone {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .mapPhone {
+      width: 100%;
+      height: 30vw;
+    }
+    .cont {
+      width: 80%;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      flex-direction: column;
+      justify-content: space-between;
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        img {
+          width: 150px;
+          height: 150px;
+        }
+        font-size: 20px;
+      }
+    }
+  }
+}

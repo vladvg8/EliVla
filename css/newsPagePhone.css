@@ -1,0 +1,185 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #E9F6FF;
+}
+
+* a {
+  color: black;
+  text-decoration: none;
+}
+
+.phoneVersion {
+  display: none;
+}
+
+@media (max-width: 1179px) {
+  .phoneVersion {
+    display: block;
+  }
+  header, .newPhoto, main, .jurnalist, .text, footer, .newMain, .NewPhoto, .NewPhoto img, .NewPhoto p {
+    display: none;
+  }
+  .phoneHeader {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 100%;
+    height: 100px;
+  }
+  .phoneHeader .gridHeader {
+    z-index: 5;
+    width: 90vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .phoneHeader .gridHeader img {
+    z-index: 3;
+  }
+  .phoneHeader .gridHeader .burger_menu {
+    display: block;
+    position: relative;
+    width: 30px;
+    height: 20px;
+    z-index: 3;
+  }
+  .phoneHeader .gridHeader .burger_menu span {
+    position: absolute;
+    background-color: white;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    top: 8px;
+  }
+  .phoneHeader .gridHeader .burger_menu:before, .phoneHeader .gridHeader .burger_menu:after {
+    content: "";
+    background-color: white;
+    position: absolute;
+    width: 100%;
+    height: 3px;
+  }
+  .phoneHeader .gridHeader .burger_menu:before {
+    top: 0;
+  }
+  .phoneHeader .gridHeader .burger_menu:after {
+    bottom: 0;
+  }
+  .phoneHeader .gridHeader .burger {
+    position: fixed;
+    display: none;
+    top: 0;
+    left: 70%;
+    width: 30%;
+    height: 100%;
+    background: black;
+    padding: 110px 0px 0px 0px;
+  }
+  .phoneHeader .gridHeader .burger ul {
+    display: flex;
+    height: 200px;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: right;
+    padding: 0px 5vw 0px 0px;
+  }
+  .phoneHeader .gridHeader .burger ul li {
+    list-style-type: none;
+  }
+  .mainPhone {
+    background-image: url(../img/newsPh1.png);
+    background-size: cover;
+    width: 100%;
+    height: 40vw;
+  }
+  .textForMainPhone {
+    display: flex;
+    background-color: black;
+    color: white;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    padding: 2vw 4vw;
+    margin-top: -5vw;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 20px;
+    outline: 0.2vw solid white;
+  }
+  .textForPhone {
+    margin: 20px auto;
+    font-size: 25px;
+  }
+  .firstTextPhone {
+    width: 90%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 0 auto;
+    text-align: left;
+    line-height: 150%;
+  }
+  .secondTextPhone {
+    width: 90%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 20px auto;
+    text-align: left;
+    line-height: 150%;
+  }
+  .thirdTextPhone {
+    width: 90%;
+    height: -moz-fit-content;
+    height: fit-content;
+    margin: 20px auto;
+    text-align: left;
+    line-height: 150%;
+  }
+  .autorPhone {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .autorPhone img {
+    width: 150px;
+    height: 150px;
+  }
+  .autorPhone .textAutorPhone {
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .autorPhone .textAutorPhone h3:nth-child(3) {
+    margin-top: 15px;
+  }
+  .autorPhone .textAutorPhone p {
+    margin-top: 5px;
+  }
+  .footerPhone {
+    width: 100%;
+    height: -moz-fit-content;
+    height: fit-content;
+    background-color: black;
+    margin-top: 20px;
+  }
+  .footerPhone svg {
+    margin: 15px 0 0 15px;
+  }
+  .footerPhone p {
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    font-size: 15px;
+    margin: 10px auto 0 auto;
+    padding: 0 0 10px 0;
+  }
+}/*# sourceMappingURL=newsPagePhone.css.map */
