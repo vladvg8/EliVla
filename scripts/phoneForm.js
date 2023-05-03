@@ -7,7 +7,9 @@ function getFormPhone() {
     select.addEventListener('change', function() {
         let getValuePhone = this.value;
     })
-
+    if (fioPhone == '' || telephonePhone == '' || emailPhone == '' || datePhone == '') {
+        alert('Уважаемый пользователь, введите все поля.')
+    }
     let formAlert = document.getElementById('submitEvent');
     formAlert.className = 'show';
     setTimeout(function () {
