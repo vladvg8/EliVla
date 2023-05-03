@@ -9,10 +9,10 @@ function getFormPhone() {
     })
     if (fioPhone == '' || telephonePhone == '' || emailPhone == '' || datePhone == '') {
         alert('Уважаемый пользователь, введите все поля.')
-    }
-    let formAlert = document.getElementById('submitEvent');
-    formAlert.className = 'show';
-    setTimeout(function () {
+    } else {
+        formAlert.className = 'show';
+        setTimeout(function () {
         formAlert.className = formAlert.className.replace("show", "")
     }, 3000);
+    }
 }
